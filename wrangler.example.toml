@@ -15,3 +15,6 @@ kv_namespaces = [
 command = "npm install && npm run build"
 [build.upload]
 format = "service-worker"
+
+[secrets]
+AUTH_TOKEN = "your authorization token for uploading (remove it if you don't want to have it)"

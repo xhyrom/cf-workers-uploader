@@ -13,6 +13,15 @@ export const handleRequest = async(request: Request): Promise<Response> => {
         );
     }
 
+    if (AUTH_TOKEN && request.headers.get('authorization') !== AUTH_TOKEN) {
+        return new Response(
+            JSON.stringify({
+                error: 'Invalid authorization token',
+            }),
+            { status: 401 }
+        );
+    }
+
     const arrayBuffer = await file.arrayBuffer();
 
     const id = nanoid(12);
