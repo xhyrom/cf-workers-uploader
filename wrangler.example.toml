@@ -1,0 +1,17 @@
+name = "cf-workers-uploader"
+type = "javascript"
+account_id = "your account id"
+workers_dev = true
+route = ""
+zone_id = ""
+webpack_config = "webpack.config.js"
+compatibility_date = "2022-04-07"
+
+kv_namespaces = [
+    { binding = "kv binding", id = "kv id" }
+]
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
