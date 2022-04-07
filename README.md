@@ -14,7 +14,7 @@ Image/file uploader that works with [Cloudflare Workers](https://workers.cloudfl
   "Name": "cf-workers",
   "DestinationType": "ImageUploader, TextUploader, FileUploader",
   "RequestMethod": "POST",
-  "RequestURL": "https://cf-workers-uploader.generalkubo.workers.dev/",
+  "RequestURL": "https://cf-workers-uploader.hyro.workers.dev/",
   "Headers": {
     "Authorization": "authorization key"
   },
@@ -37,7 +37,7 @@ import FormData from 'form-data';
     const image = await readFile('./name_of_file.png');
     formData.append('file', image, 'name_of_file.png');
 
-    const res = await fetch('https://cf-workers-uploader.generalkubo.workers.dev/', {
+    const res = await fetch('https://cf-workers-uploader.hyro.workers.dev/', {
         method: 'POST',
         headers: {
             ...formData.getHeaders(),
