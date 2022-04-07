@@ -19,7 +19,7 @@ export const handleRequest = async(request: Request): Promise<Response> => {
         );
     }
 
-    if (AUTH_TOKEN && request.headers.get('authorization') !== AUTH_TOKEN) {
+    if (typeof AUTH_TOKEN !== 'undefined' && request.headers.get('authorization') !== AUTH_TOKEN) {
         return new Response(
             JSON.stringify({
                 error: 'Invalid authorization token',
