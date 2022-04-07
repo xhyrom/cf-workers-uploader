@@ -55,4 +55,5 @@ import FormData from 'form-data';
 **1.5)** Rename `wrangler.example.toml` -> `wrangler.toml`  
 **2)** `wrangler kv:namespace create "UPLOADS"`  
 **2.5)** Update `wrangler.toml` variables  
-**3)** `wrangler publish`  
+**3)** `wrangler secret put AUTH_TOKEN`  
+**4)** `wrangler publish`  
